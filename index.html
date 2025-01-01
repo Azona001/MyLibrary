@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header><h1>My Library</h1></header>
+    <div class="nav">
+      <h2>Welcome to My Library</h2>
+      <p>Lookup or add your favorite books</p>
+      <input type="search" class="search" placeholder="Search..." />
+      <button class="add">Add Book</button>
+    </div>
+    <div class="libraryform hide">
+      <form name="control" class="control">
+        <div class="field">
+          <span class="label">
+            <label for="title">Title: </label>
+          </span>
+          <span class="input-span">
+            <input class="input" type="text" name="title" id="title" required />
+          </span>
+        </div>
+
+        <div class="field">
+          <span class="label">
+            <label for="pages">Pages: </label>
+          </span>
+          <span class="input-span">
+            <input class="input" type="number" name="pages" min="0" id="page" required />
+          </span>
+        </div>
+
+        <div class="field">
+          <span class="label">
+            <label for="author">Author: </label>
+          </span>
+          <span class="input-span">
+            <input class="input" type="text" name="author" id="author" required />
+          </span>
+        </div>
+
+        <div class="field">
+          <span class="label">
+            <label for="read">Read: </label>
+          </span>
+          <span class="input-span">
+            <input class="input" type="text" name="read" required />
+          </span>
+        </div>
+        <br />
+        <input class="submit" type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <div class="container">
+      <span class="intro">List of Books</span>
+      <!-- <div class="book">
+           <ul class="info">
+            <li class="title">Title: </li>
+            <li class="page">Page: </li>
+            <li class="author">Author: </li>
+           </ul>
+        </div>-->
+    </div>
+
+    <footer class="footer">&copy; 2024</footer>
+
+    <script src="./index.js" ></script>
+  </body>
+</html>
