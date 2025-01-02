@@ -1,112 +1,95 @@
 //import "./styles.css";
-class Books {
-  constructor(title, page, author, reading) {
-    this.title = title;
-    this.page = page;
-    this.author = author;
-    this.reading = reading;
-    this.info = function () {
-      return `${this.title} written by ${this.author}, ${this.page} pages, ${this.reading} `;
-    };
-  }
-}
-
-const myLibrary = [];
-function addToMyLibrary(b) {
-  myLibrary.push(b);
-  return myLibrary;
-}
-
-const container = document.querySelector(".container");
-
-function bookItems() {
-  for (let i = 0; i < myLibrary.length; i++) {
-    let items = myLibrary[i];
-    const book = document.createElement("div");
-    book.classList.add("book");
-    const info = document.createElement("ul");
-    info.classList.add("info");
-
-    container.appendChild(book);
-    book.appendChild(info);
-
-    let bookInfo = Object.keys(items);
-    let bookValue = Object.values(items);
-    for (let i = 0; i < bookInfo.length; i++) {
-      if (bookInfo[i] === "info") continue;
-      const list = document.createElement("li");
-      list.textContent = `${bookInfo[i]}: ${bookValue[i]}`;
-      if (bookInfo[i] === "page") list.textContent += " pages";
-      info.appendChild(list);
+var Books = /** @class */ (function () {
+    function Books(title, page, author, reading) {
+        this.title = title;
+        this.page = page;
+        this.author = author;
+        this.reading = reading;
+        this.info = function () {
+            return "".concat(this.title, " written by ").concat(this.author, ", ").concat(this.page, " pages, ").concat(this.reading, " ");
+        };
     }
-  }
+    return Books;
+}());
+var myLibrary = [];
+function addToMyLibrary(b) {
+    myLibrary.push(b);
+    return myLibrary;
 }
-
-const bookOne = new Books(
-  "Romeo and Juliet",
-  144,
-  "William Shakespeare",
-  "read"
-);
-const bookTwo = new Books(
-  "Harry Potter and the Sorcerer's Stone",
-  270,
-  "J.K Rowling",
-  "not read"
-);
-const bookThree = new Books(
-  "Song of Ice and Fire",
-  332,
-  "G.R.R Martin",
-  "Read"
-);
-const addBookOne = addToMyLibrary(bookOne);
-const addBookTwo = addToMyLibrary(bookTwo);
-const addBookThree = addToMyLibrary(bookThree);
+var container = document.querySelector(".container");
+function bookItems() {
+    for (var i = 0; i < myLibrary.length; i++) {
+        var items = myLibrary[i];
+        var book = document.createElement("div");
+        book.classList.add("book");
+        var info = document.createElement("ul");
+        info.classList.add("info");
+        container === null || container === void 0 ? void 0 : container.appendChild(book);
+        book.appendChild(info);
+        var bookInfo = Object.keys(items);
+        var bookValue = Object.values(items);
+        for (var i_1 = 0; i_1 < bookInfo.length; i_1++) {
+            if (bookInfo[i_1] === "info")
+                continue;
+            var list = document.createElement("li");
+            list.textContent = "".concat(bookInfo[i_1], ": ").concat(bookValue[i_1]);
+            if (bookInfo[i_1] === "page")
+                list.textContent += " pages";
+            info.appendChild(list);
+        }
+    }
+}
+var bookOne = new Books("Romeo and Juliet", 144, "William Shakespeare", "read");
+var bookTwo = new Books("Harry Potter and the Sorcerer's Stone", 270, "J.K Rowling", "not read");
+var bookThree = new Books("Song of Ice and Fire", 332, "G.R.R Martin", "Read");
+var addBookOne = addToMyLibrary(bookOne);
+var addBookTwo = addToMyLibrary(bookTwo);
+var addBookThree = addToMyLibrary(bookThree);
 bookItems();
-const form = document.forms.control;
-
+var form = document.forms[0];
 function addBook() {
-  const title = document.getElementById("title").value;
-  document.getElementById("title").value = "";
-  const pages = form.pages.value;
-  form.pages.value = "";
-  const author = form.author.value;
-  form.author.value = "";
-  const read = form.read.value;
-  form.read.value = "";
-  const setBook = new Books(title, pages, author, read);
-  myLibrary.push(setBook);
-
-  let item = myLibrary[myLibrary.length - 1];
-  const book = document.createElement("div");
-  book.classList.add("book");
-  const info = document.createElement("ul");
-  info.classList.add("info");
-
-  container.appendChild(book);
-  book.appendChild(info);
-
-  let bookInfo = Object.keys(item);
-  let bookValue = Object.values(item);
-  for (let i = 0; i < bookInfo.length; i++) {
-    if (bookInfo[i] === "info") continue;
-    const list = document.createElement("li");
-    list.textContent = `${bookInfo[i]}: ${bookValue[i]}`;
-    if (bookInfo[i] === "page") list.textContent += " pages";
-    info.appendChild(list);
-  }
+    var title = form.title.value;
+    form.title.value = "";
+    var pages = form.pages.value;
+    form.pages.value = "";
+    var author = form.author.value;
+    form.author.value = "";
+    var read = form.read.value;
+    form.read.value = "";
+    var setBook = new Books(title, pages, author, read);
+    myLibrary.push(setBook);
+    var item = myLibrary[myLibrary.length - 1];
+    var book = document.createElement("div");
+    book.classList.add("book");
+    var info = document.createElement("ul");
+    info.classList.add("info");
+    container === null || container === void 0 ? void 0 : container.appendChild(book);
+    book.appendChild(info);
+    var bookInfo = Object.keys(item);
+    var bookValue = Object.values(item);
+    for (var i = 0; i < bookInfo.length; i++) {
+        if (bookInfo[i] === "info")
+            continue;
+        var list = document.createElement("li");
+        list.textContent = "".concat(bookInfo[i], ": ").concat(bookValue[i]);
+        if (bookInfo[i] === "page")
+            list.textContent += " pages";
+        info.appendChild(list);
+    }
 }
-
 form.addEventListener("submit", addBook);
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
 });
-
-const button = document.querySelector(".add");
-const formContainer = document.querySelector(".libraryform");
-button.addEventListener("click", () => {
-  if (formContainer.classList.contains("libraryform")) {
-    formContainer.classList.toggle("hide");
-  }
-});
+var button = document.querySelector(".add");
+var formContainer = document.querySelector(".libraryform");
+if (button) {
+    button.addEventListener("click", function () {
+        if (formContainer === null || formContainer === void 0 ? void 0 : formContainer.classList.contains("libraryform")) {
+            formContainer.classList.toggle("hide");
+        }
+    });
+}
+else {
+    console.error("No button selected!");
+}
