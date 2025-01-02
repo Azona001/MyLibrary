@@ -39,9 +39,9 @@ function bookItems() {
         }
     }
 }
-var bookOne = new Books("Romeo and Juliet", 144, "William Shakespeare", "read");
-var bookTwo = new Books("Harry Potter and the Sorcerer's Stone", 270, "J.K Rowling", "not read");
-var bookThree = new Books("Song of Ice and Fire", 332, "G.R.R Martin", "Read");
+var bookOne = new Books("Romeo and Juliet", "144", "William Shakespeare", "read");
+var bookTwo = new Books("Harry Potter and the Sorcerer's Stone", "270", "J.K Rowling", "not read");
+var bookThree = new Books("Song of Ice and Fire", "332", "G.R.R Martin", "Read");
 var addBookOne = addToMyLibrary(bookOne);
 var addBookTwo = addToMyLibrary(bookTwo);
 var addBookThree = addToMyLibrary(bookThree);

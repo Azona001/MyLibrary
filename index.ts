@@ -1,7 +1,7 @@
 //import "./styles.css";
 class Books {
     title: string;
-    page: string;
+    page: string | number;
     author: string;
     reading: string;
     info: () => string;
@@ -70,7 +70,7 @@ class Books {
   const addBookThree = addToMyLibrary(bookThree);
   bookItems();
 
-  interface HTMLFormElement extends HTMLFormControlsCollection {
+  interface HTMLFormElement extends HTMLElement{
     title: HTMLInputElement;
     pages: HTMLInputElement;
     author: HTMLInputElement;
