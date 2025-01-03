@@ -146,6 +146,7 @@ h2 {
   background-color: #997777;
   color: white;
   box-shadow: 2px 2px 5px gray;
+  float: right;
 }
 
 .submit:hover {
@@ -169,12 +170,20 @@ button:hover {
   :root {
     font-size: 1.2em;
   } 
+
+  .libraryform, .control {
+    float: none;
+  }
  
 }
 
-@media (max-width: 50em) {
+@media (min-width: 50em) {
   :root {
     font-size: 0.8em;
+  }
+
+  .libraryform, .control {
+    float: right;
   }
   
 }
