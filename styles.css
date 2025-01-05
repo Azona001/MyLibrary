@@ -109,6 +109,12 @@ h2 {
   float: right;
 }
 
+.control::after {
+  display: table;
+  clear: both;
+  content: " ";
+}
+
 .field {
   display: flex;
   flex-direction: row;

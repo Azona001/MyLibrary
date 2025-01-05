@@ -36,7 +36,7 @@ class Books {
       book.appendChild(info);
   
       let bookInfo = Object.keys(items);
-      let bookValue = Object.values(items);
+      let bookValue: Books[] = Object.values(items);
       for (let i = 0; i < bookInfo.length; i++) {
         if (bookInfo[i] === "info") continue;
         const list = document.createElement("li");

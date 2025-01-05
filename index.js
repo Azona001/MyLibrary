@@ -46,6 +46,7 @@ var addBookOne = addToMyLibrary(bookOne);
 var addBookTwo = addToMyLibrary(bookTwo);
 var addBookThree = addToMyLibrary(bookThree);
 bookItems();
+
 var form = document.forms[0];
 function addBook() {
     var title = form.title.value;
