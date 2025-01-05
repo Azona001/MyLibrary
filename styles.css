@@ -7,13 +7,14 @@
   box-sizing: inherit;
 }
 
-* + * {
-  margin-top: 0.8em;
+body * + * {
+  margin-top: 0.5em;
 }
 
 body {
   font-family: sans-serif;
   font-size: 1rem;
+  letter-spacing: 0.2em;
   background-color: rgb(235, 235, 235);
 }
 
@@ -101,7 +102,7 @@ h2 {
 }
 
 .control {
-  padding: 1em;
+  padding: 1em 1.5em;
   border-radius: 1em;
   background-color: white;
   width: 100%;
@@ -166,18 +167,20 @@ button:hover {
   font-size: 0.5rem;
 }
 
-@media  (min-width: 30em) {
+@media(min-width: 30em) {
   :root {
     font-size: 1.2em;
   } 
 
   .libraryform, .control {
     float: none;
+    
+   
   }
  
 }
 
-@media (min-width: 50em) {
+@media(min-width: 50em) {
   :root {
     font-size: 0.8em;
   }
