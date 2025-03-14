@@ -38,7 +38,7 @@ class Books {
       let bookInfo = Object.keys(items);
       let bookValue: Books[] = Object.values(items);
       for (let i = 0; i < bookInfo.length; i++) {
-        if (bookInfo[i] === "info") continue;
+        if ( bookInfo[i] === "info") continue;
         const list = document.createElement("li");
         list.textContent = `${bookInfo[i]}: ${bookValue[i]}`;
         if (bookInfo[i] === "page") list.textContent += " pages";
