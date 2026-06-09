@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,9 +13,11 @@
       <p>Lookup or add your favorite books</p>
       <input type="search" class="search" placeholder="Search..." />
       <button class="add">Add Book</button>
+
+      <button class="theme-toggle"></button>
     </div>
     <div class="libraryform hide">
-      <form name="control" id="control" class="control">
+      <form name="control" id="book-form" class="control">
         <div class="field">
           <span class="label">
             <label for="title">Title: </label>
@@ -30,7 +32,14 @@
             <label for="pages">Pages: </label>
           </span>
           <span class="input-span">
-            <input class="input" type="number" name="pages" min="0" id="page" required />
+            <input
+              class="input"
+              type="number"
+              name="pages"
+              min="0"
+              id="page"
+              required
+            />
           </span>
         </div>
 
@@ -39,7 +48,13 @@
             <label for="author">Author: </label>
           </span>
           <span class="input-span">
-            <input class="input" type="text" name="author" id="author" required />
+            <input
+              class="input"
+              type="text"
+              name="author"
+              id="author"
+              required
+            />
           </span>
         </div>
 
@@ -48,11 +63,17 @@
             <label for="read">Read: </label>
           </span>
           <span class="input-span">
-            <input class="input" type="text" name="read" required />
+            <select class="input" name="read" id="read" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="read">Yes</option>
+              <option value="not read">No</option>
+            </select>
+            <!-- <input class="input" type="text" name="read" required /> -->
           </span>
         </div>
-        <br />
-        <input class="submit" type="submit" value="Submit" />
+        <div class="submit-button">
+          <button class="submit" type="submit">Submit</button>
+        </div>
       </form>
     </div>
 
@@ -69,6 +90,6 @@
 
     <footer class="footer">&copy; 2024</footer>
 
-    <script src="./index.js" ></script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>

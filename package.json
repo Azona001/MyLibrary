@@ -1,0 +1,27 @@
+{
+  "name": "mylibrary",
+  "version": "1.0.0",
+  "description": "a library app",
+  "homepage": "https://github.com/Azona001/MyLibrary#readme",
+  "bugs": {
+    "url": "https://github.com/Azona001/MyLibrary/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azona001/MyLibrary.git"
+  },
+  "license": "ISC",
+  "author": "Azona",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "uuid": "^14.0.0"
+  },
+  "devDependencies": {
+    "@types/uuid": "^10.0.0"
+  }
+}
